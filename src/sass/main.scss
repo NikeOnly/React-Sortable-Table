@@ -1,0 +1,28 @@
+.main-table {
+    margin-top: 30px;
+
+    tr th {
+        cursor: pointer;
+    }
+
+    tr th:last-child {
+        width: 13%;
+        cursor: default;
+    }
+
+    td:last-child {
+        text-align: center;
+    }
+
+    i {
+        vertical-align: middle;
+    }
+}
+
+.icon-visible {
+    visibility: visible;
+}
+
+.icon-hidden {
+    visibility: hidden;
+}
