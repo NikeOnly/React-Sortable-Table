@@ -14,3 +14,8 @@ Using this app, you can add or delete a field to the table. Validation to each f
     npm install
     npm run start
 ```
+
+####To test project you need to execute in terminal (or command prompt):
+```
+    npm test  
+```
