@@ -1,7 +1,7 @@
 import {combineReducers} from 'redux';
 import tableField from './reducers-and-actions/tableFieldReducer';
 
-const rootReducer = combineReducers({    
+const rootReducer = combineReducers({
     tableField
 });
 

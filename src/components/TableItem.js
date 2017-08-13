@@ -1,7 +1,7 @@
 import React from 'react';
 
 export default class TableItem extends React.PureComponent {
-    onDeleteField() {
+    onDeleteField = () => {
       this.props.deleteField(this.props.field)
     }
 
@@ -16,7 +16,7 @@ export default class TableItem extends React.PureComponent {
                     <td>{field.phone}</td>
                     <td>{field.gender}</td>
                     <td>{field.age}</td>
-                    <td><button className="btn btn-primary btn-sm" onClick={this.onDeleteField.bind(this)}>Delete</button></td>
+                    <td><button className="btn btn-primary btn-sm" onClick={this.onDeleteField}>Delete</button></td>
                 </tr>
             </tbody>
         );

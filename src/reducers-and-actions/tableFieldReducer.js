@@ -1,10 +1,9 @@
 import {ADD_FIELD, DELETE_FIELD} from '../constants/actions';
+import LocalStorageUtil from '../utils/localStorageUtil';
 import _ from 'lodash';
 
-const INITIAL_STATE = {
-    idToField: localStorage.getItem('SimpleSortableTable') !== null
-    ? new Map( JSON.parse(localStorage.getItem('SimpleSortableTable')) )
-    : null,
+export const INITIAL_STATE = {
+    idToField: new Map(LocalStorageUtil.tableField.map((field) => [field.code, field]))
 };
 
 const reducerMap = {
@@ -14,7 +13,7 @@ const reducerMap = {
 
         updatedIdToField.set(addedField.code, addedField)
 
-        localStorage.setItem('SimpleSortableTable', JSON.stringify(Array.from(updatedIdToField.entries())) )
+        updateLocalStorage(updatedIdToField);
 
         return {idToField: updatedIdToField}
     },
@@ -23,7 +22,7 @@ const reducerMap = {
         const idToField = new Map(state.idToField);
 
         if(idToField.delete(deleteField.code)) {
-            localStorage.setItem('SimpleSortableTable', JSON.stringify(Array.from(idToField.entries())) )
+            updateLocalStorage(idToField);
 
             return {idToField}
         } else {
@@ -31,6 +30,10 @@ const reducerMap = {
         }
     }
 };
+
+function updateLocalStorage(idToField) {
+    LocalStorageUtil.tableField = Array.from(idToField.values());
+}
 
 export default(state = INITIAL_STATE, action) => {
     let stateUpdates = state;

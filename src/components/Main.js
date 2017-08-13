@@ -10,7 +10,7 @@ export default class Main extends React.PureComponent {
         sortInfo: {fieldName: '', order: 'desc'},
     }
 
-    toggleTableSortBy(fieldName) {
+    toggleTableSortBy = (fieldName) => {
         if (!this.state.sortInfo || this.state.sortInfo.fieldName !== fieldName) {
             this.setState({sortInfo: {fieldName, order: 'desc'}});
         } else {
@@ -46,42 +46,42 @@ export default class Main extends React.PureComponent {
                                 sortFieldName='id'
                                 sortField={this.state.sortInfo.fieldName}
                                 sortOrder={this.state.sortInfo.order}
-                                onSortClicked={::this.toggleTableSortBy}
+                                onSortClicked={this.toggleTableSortBy}
                             />
                             <SortableHeader headerName={'First Name'}
                                 sortFieldName='firstName'
                                 sortField={this.state.sortInfo.fieldName}
                                 sortOrder={this.state.sortInfo.order}
-                                onSortClicked={::this.toggleTableSortBy}
+                                onSortClicked={this.toggleTableSortBy}
                             />
                             <SortableHeader headerName={'Last Name'}
                                 sortFieldName='lastName'
                                 sortField={this.state.sortInfo.fieldName}
                                 sortOrder={this.state.sortInfo.order}
-                                onSortClicked={::this.toggleTableSortBy}
+                                onSortClicked={this.toggleTableSortBy}
                             />
                             <SortableHeader headerName={'Phone'}
                                 sortFieldName='phone'
                                 sortField={this.state.sortInfo.fieldName}
                                 sortOrder={this.state.sortInfo.order}
-                                onSortClicked={::this.toggleTableSortBy}
+                                onSortClicked={this.toggleTableSortBy}
                             />
                             <SortableHeader headerName={'Gender'}
                                 sortFieldName='gender'
                                 sortField={this.state.sortInfo.fieldName}
                                 sortOrder={this.state.sortInfo.order}
-                                onSortClicked={::this.toggleTableSortBy}
+                                onSortClicked={this.toggleTableSortBy}
                             />
                             <SortableHeader headerName={'Age'}
                                 sortFieldName='age'
                                 sortField={this.state.sortInfo.fieldName}
                                 sortOrder={this.state.sortInfo.order}
-                                onSortClicked={::this.toggleTableSortBy}
+                                onSortClicked={this.toggleTableSortBy}
                             />
                             <th></th>
                         </tr>
                     </thead>
-                    {renderFields}
+                    {renderFields}                    
                 </table>
             </div>
         );

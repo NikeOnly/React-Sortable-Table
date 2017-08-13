@@ -1,0 +1,267 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App match snapshot 1`] = `
+<div>
+  <h3>
+    Simple form
+  </h3>
+  <form
+    onSubmit={[Function]}
+  >
+    <div
+      className="form-group "
+    >
+      <label
+        htmlFor="firstName"
+      >
+        First Name
+      </label>
+      <input
+        className="form-control"
+        id="firstName"
+        onBlur={[Function]}
+        onChange={[Function]}
+        placeholder="First Name"
+        type="text"
+        value=""
+      />
+      <span
+        className="help-block"
+      />
+    </div>
+    <div
+      className="form-group "
+    >
+      <label
+        htmlFor="lastName"
+      >
+        Last Name
+      </label>
+      <input
+        className="form-control"
+        id="lastName"
+        onBlur={[Function]}
+        onChange={[Function]}
+        placeholder="Last Name"
+        type="text"
+        value=""
+      />
+      <span
+        className="help-block"
+      />
+    </div>
+    <div
+      className="form-group "
+    >
+      <label
+        htmlFor="phone"
+      >
+        Phone
+      </label>
+      <input
+        className="form-control"
+        id="phone"
+        onBlur={[Function]}
+        onChange={[Function]}
+        placeholder="Phone"
+        type="tel"
+        value=""
+      />
+      <span
+        className="help-block"
+      />
+    </div>
+    <div
+      className="form-group"
+    >
+      <label
+        className="radio-inline"
+      >
+        <input
+          checked={true}
+          onChange={[Function]}
+          type="radio"
+          value="Male"
+        />
+        Male
+      </label>
+      <label
+        className="radio-inline"
+      >
+        <input
+          checked={false}
+          onChange={[Function]}
+          type="radio"
+          value="Female"
+        />
+        Female
+      </label>
+    </div>
+    <div
+      className="form-group "
+    >
+      <label
+        htmlFor="age"
+      >
+        Age
+      </label>
+      <input
+        className="form-control"
+        id="age"
+        onBlur={[Function]}
+        onChange={[Function]}
+        placeholder="Age"
+        type="number"
+        value=""
+      />
+      <span
+        className="help-block"
+      />
+    </div>
+    <button
+      className="btn btn-default"
+      type="submit"
+    >
+      Submit
+    </button>
+    <div
+      className="has-error"
+    >
+      <span
+        className="help-block"
+      >
+        
+      </span>
+    </div>
+  </form>
+  <table
+    className="table table-bordered main-table"
+  >
+    <thead>
+      <tr>
+        <th
+          onClick={[Function]}
+        >
+          <span
+            className="data-table-header-span"
+          >
+            #
+          </span>
+          <i
+            className="sort-icon icon-hidden material-icons"
+          >
+            keyboard_arrow_down
+          </i>
+        </th>
+        <th
+          onClick={[Function]}
+        >
+          <span
+            className="data-table-header-span"
+          >
+            First Name
+          </span>
+          <i
+            className="sort-icon icon-hidden material-icons"
+          >
+            keyboard_arrow_down
+          </i>
+        </th>
+        <th
+          onClick={[Function]}
+        >
+          <span
+            className="data-table-header-span"
+          >
+            Last Name
+          </span>
+          <i
+            className="sort-icon icon-hidden material-icons"
+          >
+            keyboard_arrow_down
+          </i>
+        </th>
+        <th
+          onClick={[Function]}
+        >
+          <span
+            className="data-table-header-span"
+          >
+            Phone
+          </span>
+          <i
+            className="sort-icon icon-hidden material-icons"
+          >
+            keyboard_arrow_down
+          </i>
+        </th>
+        <th
+          onClick={[Function]}
+        >
+          <span
+            className="data-table-header-span"
+          >
+            Gender
+          </span>
+          <i
+            className="sort-icon icon-hidden material-icons"
+          >
+            keyboard_arrow_down
+          </i>
+        </th>
+        <th
+          onClick={[Function]}
+        >
+          <span
+            className="data-table-header-span"
+          >
+            Age
+          </span>
+          <i
+            className="sort-icon icon-hidden material-icons"
+          >
+            keyboard_arrow_down
+          </i>
+        </th>
+        <th />
+      </tr>
+    </thead>
+  </table>
+</div>
+`;
+
+exports[`App render connected component 1`] = `
+<App
+  addField={[Function]}
+  deleteField={[Function]}
+  fields={Map {}}
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+  storeSubscription={
+    Subscription {
+      "listeners": Object {
+        "notify": [Function],
+      },
+      "onStateChange": [Function],
+      "parentSub": undefined,
+      "store": Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      },
+      "unsubscribe": null,
+    }
+  }
+/>
+`;

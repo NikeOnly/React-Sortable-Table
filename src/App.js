@@ -7,8 +7,7 @@ const mapStateToProps = state => ({
    fields: state.tableField.idToField
  })
 
-@connect(mapStateToProps, {addField, deleteField})
-export default class App extends Component {
+export class App extends Component {
     render() {
         const {addField, deleteField, fields} = this.props;
         return (
@@ -16,3 +15,5 @@ export default class App extends Component {
         );
     }
 }
+
+export default connect(mapStateToProps, {addField, deleteField})(App)

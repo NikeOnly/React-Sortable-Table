@@ -24,21 +24,22 @@ export default class Main extends React.PureComponent {
         }
     }
 
-    handleChange(e, field) {
+    handleChange = (e, field) => {
         const errorMessage = validation(e.target.value, field)
         const fieldError = field + 'Error';
 
         this.setState({ [field]: e.target.value, [fieldError]: errorMessage })
     }
 
-    handleBlur(e, field) {
+    handleBlur = (e, field) => {
         const errorMessage = validation(e.target.value, field)
         const fieldError = field + 'Error';
 
         this.setState({ [fieldError]: errorMessage })
     }
 
-    onAddField(e) {
+    onAddField = (e) => {
+        // console.log(e)
         e.preventDefault();
 
         if(this.state.firstNameError === '' && this.state.lastNameError === '' && this.state.phoneError === '' && this.state.ageError === '') {
@@ -65,7 +66,7 @@ export default class Main extends React.PureComponent {
             isDisabled} = this.state;
 
         return (
-            <form onSubmit={this.onAddField.bind(this)}>
+            <form onSubmit={this.onAddField}>
                 <div className={`form-group ${firstNameError ? 'has-error' : '' }`}>
                     <label htmlFor="firstName">First Name</label>
                     <input type="text"
@@ -104,20 +105,20 @@ export default class Main extends React.PureComponent {
                 </div>
                 <div className="form-group">
                     <label className="radio-inline">
-                      <input type="radio"
-                          value="Male"
-                          onChange={e => this.handleChange(e, 'gender')}
-                          checked={gender === 'Male'}
-                      />
-                      Male
+                        <input type="radio"
+                            value="Male"
+                            onChange={e => this.handleChange(e, 'gender')}
+                            checked={gender === 'Male'}
+                        />
+                        Male
                     </label>
                     <label className="radio-inline">
-                      <input type="radio"
-                          value="Female"
-                          onChange={e => this.handleChange(e, 'gender')}
-                          checked={gender === 'Female'}
-                      />
-                      Female
+                        <input type="radio"
+                            value="Female"
+                            onChange={e => this.handleChange(e, 'gender')}
+                            checked={gender === 'Female'}
+                        />
+                        Female
                     </label>
                 </div>
                 <div className={`form-group ${ageError ? 'has-error' : '' }`}>
